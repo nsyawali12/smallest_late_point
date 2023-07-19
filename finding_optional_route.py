@@ -1,7 +1,7 @@
 from dataset import distances, times, place_names
 
 
-def calculate_time_route(route_sequence, distances, times, loading_unloading_time):
+def calculate_time_route(route_sequence, distances, times):
     total_time = 0
     
     speed = 40  # Default speed

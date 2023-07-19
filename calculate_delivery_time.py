@@ -15,7 +15,7 @@ def calculate_delivery_time():
     desired_delivery_time = float(input("Enter the desired delivery time (in minutes): "))
 
     # Prompt the user for the route sequence
-    route_sequence = input("Enter the route sequence for delivery: ").split()
+    route_sequence = input("Enter the route sequence for delivery: ").split() 
     place_indices = {place: index for index, place in enumerate(place_names)}
     route_indices = [place_indices[place] for place in route_sequence]
 
@@ -48,7 +48,7 @@ def calculate_delivery_time():
         print(f"Current Distance: {current_distance}")
         print(f"Current Delivery Time: {current_delivery_time}")
     # Compare the final delivery time with the desired delivery time
-    final_delivery_time = calculate_time_route(route_indices, distances, times, loading_unloading_time)
+    final_delivery_time = calculate_time_route(route_indices, distances, times)
     if final_delivery_time <= desired_delivery_time:
         print("Delivery time is on schedule, no need to change the routes.")
     else:
